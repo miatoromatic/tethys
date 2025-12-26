@@ -1,0 +1,19 @@
+{
+  "id": "arachnas-swansong",
+  "title": "Arachna's Swansong",
+  "category": "Death",
+  "tags": ["Spider", "Venom", "Psychological"],
+  "wiki": "https://terrarp.com/wiki/arachnas-swansong_(tether)",
+  "image": "/db/tethers/arachnas-swansong.webp",
+  "description": "When you see or feel the presence of her spawn, even the smallest of spiders, your veins pulse visibly beneath your skin, dark and swollen, as if filled with venom. Check as you might, there’s not a single bite anywhere on your body. The nearer you are to your bane, the more intense the pain, as if they remember the pain you had inflicted on their kind. Suffer their hatred, killer.",
+  "negative": {
+    "1": "Deepen I: Each time you kill an arachnid, a single fanged puncture appears somewhere on your body and becomes a permanent source of localized pain as a reminder of their hatred for you.",
+    "4": "Deepen IV: When you go without killing an arachnid for a while, a psychological nest opens in your mind and inflicts you with pain from those phantom spiderlings.",
+    "7": "Deepen VII: To be expanded."
+  },
+  "positive": {
+    "1": "Mend I: Roll a 1d4, on a 1, the swansong is unchanged. On a 2 or 3, the effect is lessened. On a 4, the effect is negated until you see another arachnid.",
+    "3": "Mend III: When your veins pulse with the phantom venom, you can use your blood to inflict its effects on an enemy. You may willingly fail Resolve 1 to activate this.",
+    "7": "Mend VII: To be expanded."
+  }
+}

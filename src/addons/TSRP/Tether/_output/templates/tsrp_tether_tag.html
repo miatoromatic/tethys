@@ -1,0 +1,37 @@
+<xf:if is="$includeTemplate">
+    <template class="js-tsrp-tether-popup-template">
+        <div class="block">
+            <div class="block-container">
+                <div class="block-body">
+                    <div class="tsrp-tether__popup">
+                        <div class="tsrp-tether__header">
+                            <div class="tsrp-tether__title">{{title}}</div>
+                            <div class="tsrp-tether__category">{{category}}</div>
+                        </div>
+                        <div class="tsrp-tether__meta">
+                            <div class="tsrp-tether__image-wrap"><img src="{{image}}" alt="{{title}}" /></div>
+                            <div class="tsrp-tether__tags">{{tags}}</div>
+                            <div class="tsrp-tether__description">{{description}}</div>
+                            <div class="tsrp-tether__wiki"><a href="{{wiki}}" target="_blank" rel="noopener">View wiki</a></div>
+                        </div>
+                        <div class="tsrp-tether__levels">
+                            {{positiveLevels}}
+                            {{negativeLevels}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</xf:if>
+
+<span class="tsrp-tether"
+      data-xf-init="tsrp-tether"
+      data-tether-id="{$tetherId}"
+      data-tether-title="{$title}"
+      data-tether-image="{$imageUrl}"
+      data-tether-json="{$jsonUrl}"
+      data-selected-positive="{$selectedPositive}"
+      data-selected-negative="{$selectedNegative}">
+    <img class="tsrp-tether__image" src="{$imageUrl}" alt="{$title}" />
+</span>
