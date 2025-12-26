@@ -1,0 +1,15 @@
+{
+  "title": "Tether System",
+  "description": "Adds [tether] BB code for TSRP tethers.",
+  "version_id": 1000010,
+  "version_string": "1.0.0",
+  "dev": "TSRP",
+  "dev_url": "https://terrarp.com",
+  "faq_url": "",
+  "support_url": "",
+  "extra_urls": [],
+  "require": {
+    "XF": [2020070, "XenForo 2.2.8 Patch 1+"]
+  },
+  "icon": ""
+}
