@@ -6,6 +6,11 @@ use XF\AddOn\AbstractSetup;
 
 class Setup extends AbstractSetup
 {
+    public function install(array $stepParams = []): void
+    {
+        $this->installStep1();
+    }
+
     public function installStep1(): void
     {
         $bbCode = $this->app->em()->create('XF:BbCode');
@@ -29,5 +34,15 @@ class Setup extends AbstractSetup
         {
             $bbCode->delete();
         }
+    }
+
+    public function upgrade(array $stepParams = []): void
+    {
+        // No upgrade steps yet.
+    }
+
+    public function uninstall(array $stepParams = []): void
+    {
+        $this->uninstallStep1();
     }
 }
