@@ -13,26 +13,23 @@ class Setup extends AbstractSetup
 
     public function installStep1(): void
     {
-        $bbCode = $this->app->em()->create('XF:BbCode');
-        $bbCode->tag = 'tether';
-        $bbCode->type = 'callback';
-        $bbCode->callback_class = 'TSRP\\Tether\\BbCode\\Tether';
-        $bbCode->callback_method = 'render';
-        $bbCode->example = '[tether=arachnas-swansong]positive1,negative5[/tether]';
-        $bbCode->description = 'Render tether images with a popup that shows tether details.';
-        $bbCode->active = 1;
-        $bbCode->trim = 1;
-        $bbCode->allow_signature = 1;
-        $bbCode->save();
+        $this->db()->insert('xf_bb_code', [
+            'bb_code_tag' => 'tether',
+            'bb_code_type' => 'callback',
+            'bb_code_callback_class' => 'TSRP\\Tether\\BbCode\\Tether',
+            'bb_code_callback_method' => 'render',
+            'bb_code_example' => '[tether=arachnas-swansong]positive1,negative5[/tether]',
+            'bb_code_description' => 'Render tether images with a popup that shows tether details.',
+            'bb_code_active' => 1,
+            'bb_code_trim' => 1,
+            'bb_code_allow_signature' => 1,
+            'bb_code_addon_id' => 'TSRP/Tether'
+        ]);
     }
 
     public function uninstallStep1(): void
     {
-        $bbCode = $this->app->finder('XF:BbCode')->where('tag', 'tether')->fetchOne();
-        if ($bbCode)
-        {
-            $bbCode->delete();
-        }
+        $this->db()->delete('xf_bb_code', 'bb_code_tag = ?', 'tether');
     }
 
     public function upgrade(array $stepParams = []): void
