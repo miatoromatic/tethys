@@ -2,8 +2,9 @@
 
 namespace TSRP\Tether;
 
-use XF\AddOn\SetupBase;
-class Setup extends SetupBase
+use XF\AddOn\AbstractSetup;
+
+class Setup extends AbstractSetup
 {
     public function installStep1(): void
     {
